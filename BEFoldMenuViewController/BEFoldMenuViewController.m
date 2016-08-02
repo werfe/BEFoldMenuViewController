@@ -25,6 +25,8 @@
 
 #define IS_IOS_7_OR_LESS ([[UIDevice currentDevice].systemVersion floatValue] <8.0)?YES:NO
 
+
+
 @interface BEFoldMenuViewController ()
 
 @property (nonatomic, assign, readwrite ) __block BSMenuState menuState;
@@ -53,10 +55,18 @@
     // Do any additional setup after loading the view.
     
     [self initializeData];
+    
+    //Storyboard support
     if (self.storyboard) {
-        [self performSegueWithIdentifier:@"mainSegue" sender:nil];
-        [self performSegueWithIdentifier:@"leftSegue" sender:nil];
-        [self performSegueWithIdentifier:@"rightSegue" sender:nil];
+        @try {
+            [self performSegueWithIdentifier:_mainSegueIdentifier sender:nil];
+            [self performSegueWithIdentifier:_leftSegueIdentifier sender:nil];
+            [self performSegueWithIdentifier:_rightSegueIdentifier sender:nil];
+        } @catch (NSException *exception) {
+            NSLog(@"Error when perform segue Main Storyboard.");
+        } @finally {
+            
+        }
     }
 }
 -(void)viewDidAppear:(BOOL)animated{
@@ -83,6 +93,10 @@
     
     _leftMenuWidth = DEFAULT_LEFT_MENU_WIDTH;
     _rightMenuWidth = DEFAULT_RIGHT_MENU_WIDTH;
+    
+    _mainSegueIdentifier = DEFAULT_MAIN_SEGUE_IDENTIFIER;
+    _rightSegueIdentifier = DEFAULT_RIGHT_SEGUE_IDENTIFIER;
+    _leftSegueIdentifier = DEFAULT_LEFT_SEGUE_IDENTIFIER;
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [self.view addGestureRecognizer:panGesture];
@@ -327,6 +341,44 @@
     }
     CGRect rightViewFrame = CGRectMake(currentDeviceWidth-_rightMenuWidth, 0, _rightMenuWidth, currentDeviceHeight);
     [_rightViewController.view setFrame:rightViewFrame];
+}
+
+-(void)setMainSegueIdentifier:(NSString *)mainSegueIdentifier{
+    _mainSegueIdentifier = [mainSegueIdentifier copy];
+    if (self.storyboard) {
+        @try {
+            [self performSegueWithIdentifier:_mainSegueIdentifier sender:nil];
+        } @catch (NSException *exception) {
+            NSLog(@"Error when perform segue Main Storyboard.");
+        } @finally {
+            
+        }
+    }
+}
+-(void)setLeftSegueIdentifier:(NSString *)leftSegueIdentifier{
+    _leftSegueIdentifier = [leftSegueIdentifier copy];
+    if (self.storyboard) {
+        @try {
+            [self performSegueWithIdentifier:_leftSegueIdentifier sender:nil];
+        } @catch (NSException *exception) {
+            NSLog(@"Error when perform segue Main Storyboard.");
+        } @finally {
+            
+        }
+    }
+}
+
+-(void)setRightSegueIdentifier:(NSString *)rightSegueIdentifier{
+    _rightSegueIdentifier = [rightSegueIdentifier copy];
+    if (self.storyboard) {
+        @try {
+            [self performSegueWithIdentifier:_rightSegueIdentifier sender:nil];
+        } @catch (NSException *exception) {
+            NSLog(@"Error when perform segue Main Storyboard.");
+        } @finally {
+            
+        }
+    }
 }
 
 

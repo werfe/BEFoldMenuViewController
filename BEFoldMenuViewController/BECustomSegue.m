@@ -13,13 +13,16 @@
 
 -(void)perform{
     NSLog(@"Identifier %@",self.identifier);
+    
     if ([self.sourceViewController isKindOfClass:[BEFoldMenuViewController class]]) {
-        if ([self.identifier isEqualToString:@"mainSegue"]) {
-            ((BEFoldMenuViewController *)self.sourceViewController).mainViewController = self.destinationViewController;
-        }else if([self.identifier isEqualToString:@"leftSegue"]){
-            ((BEFoldMenuViewController *)self.sourceViewController).leftViewController = self.destinationViewController;
-        }else if([self.identifier isEqualToString:@"rightSegue"]){
-            ((BEFoldMenuViewController *)self.sourceViewController).rightViewController = self.destinationViewController;
+        BEFoldMenuViewController *foldViewController = (BEFoldMenuViewController *)self.sourceViewController;
+        
+        if ([self.identifier isEqualToString:foldViewController.mainSegueIdentifier]) {
+            foldViewController.mainViewController = self.destinationViewController;
+        }else if([self.identifier isEqualToString:foldViewController.leftSegueIdentifier]){
+            foldViewController.leftViewController = self.destinationViewController;
+        }else if([self.identifier isEqualToString:foldViewController.rightSegueIdentifier]){
+            foldViewController.rightViewController = self.destinationViewController;
         }
     }
     

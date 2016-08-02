@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#define DEFAULT_MAIN_SEGUE_IDENTIFIER @"mainSegueIdentifier"
+#define DEFAULT_LEFT_SEGUE_IDENTIFIER @"leftSegueIdentifier"
+#define DEFAULT_RIGHT_SEGUE_IDENTIFIER @"rightSegueIdentifier"
+
 typedef NS_ENUM(NSUInteger, BSMenuState) {
     BSMenuStateLeftOpen,
     BSMenuStateRightOpen,
@@ -39,6 +43,12 @@ typedef NS_ENUM(NSUInteger, BSMenuState) {
 @property (nonatomic, assign) CGFloat topShadowOpacity;
 
 @property (nonatomic, assign) CGFloat animationDuration;
+
+
+//Properties for support Storyboard
+@property (nonatomic,copy) NSString *mainSegueIdentifier;
+@property (nonatomic,copy) NSString *leftSegueIdentifier;
+@property (nonatomic,copy) NSString *rightSegueIdentifier;
 
 
 -(void)leftMenuAction;

@@ -19,9 +19,9 @@
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <segue destination="nZp-wS-qwH" kind="custom" identifier="mainSegue" customClass="BECustomSegue" id="EgK-Zt-k3Y"/>
-                        <segue destination="7Z7-I0-ik0" kind="custom" identifier="leftSegue" customClass="BECustomSegue" id="oD4-aD-OaX"/>
-                        <segue destination="r1Q-7D-laU" kind="custom" identifier="rightSegue" customClass="BECustomSegue" id="qaZ-xr-rWo"/>
+                        <segue destination="nZp-wS-qwH" kind="custom" identifier="mainSegueIdentifier" customClass="BECustomSegue" id="EgK-Zt-k3Y"/>
+                        <segue destination="7Z7-I0-ik0" kind="custom" identifier="leftSegueIdentifier" customClass="BECustomSegue" id="oD4-aD-OaX"/>
+                        <segue destination="r1Q-7D-laU" kind="custom" identifier="rightSegueIdentifier" customClass="BECustomSegue" id="qaZ-xr-rWo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

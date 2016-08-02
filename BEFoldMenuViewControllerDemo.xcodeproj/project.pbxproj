@@ -24,6 +24,7 @@
 		1077952B1D503BC30041B2EE /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 107795281D503BC30041B2EE /* main.png */; };
 		1077952C1D503BC30041B2EE /* right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 107795291D503BC30041B2EE /* right.jpg */; };
 		1077952F1D503C1F0041B2EE /* BECustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077952E1D503C1F0041B2EE /* BECustomSegue.m */; };
+		107795331D5051890041B2EE /* captureAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 107795321D5051890041B2EE /* captureAnimation.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		107795291D503BC30041B2EE /* right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = right.jpg; sourceTree = "<group>"; };
 		1077952D1D503C1F0041B2EE /* BECustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BECustomSegue.h; sourceTree = "<group>"; };
 		1077952E1D503C1F0041B2EE /* BECustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BECustomSegue.m; sourceTree = "<group>"; };
+		107795321D5051890041B2EE /* captureAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = captureAnimation.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				107795271D503BC30041B2EE /* left.png */,
 				107795281D503BC30041B2EE /* main.png */,
 				107795291D503BC30041B2EE /* right.jpg */,
+				107795321D5051890041B2EE /* captureAnimation.gif */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				1077952C1D503BC30041B2EE /* right.jpg in Resources */,
 				1077952A1D503BC30041B2EE /* left.png in Resources */,
 				107794981D4DAFC00041B2EE /* LaunchScreen.storyboard in Resources */,
+				107795331D5051890041B2EE /* captureAnimation.gif in Resources */,
 				1077952B1D503BC30041B2EE /* main.png in Resources */,
 				107794951D4DAFC00041B2EE /* Assets.xcassets in Resources */,
 				107794931D4DAFC00041B2EE /* Main.storyboard in Resources */,
