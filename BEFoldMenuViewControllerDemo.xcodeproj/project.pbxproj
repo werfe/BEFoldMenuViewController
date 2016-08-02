@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1077948A1D4DAFC00041B2EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 107794891D4DAFC00041B2EE /* main.m */; };
+		1077948D1D4DAFC00041B2EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077948C1D4DAFC00041B2EE /* AppDelegate.m */; };
+		107794901D4DAFC00041B2EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077948F1D4DAFC00041B2EE /* ViewController.m */; };
+		107794931D4DAFC00041B2EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 107794911D4DAFC00041B2EE /* Main.storyboard */; };
+		107794951D4DAFC00041B2EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107794941D4DAFC00041B2EE /* Assets.xcassets */; };
+		107794981D4DAFC00041B2EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 107794961D4DAFC00041B2EE /* LaunchScreen.storyboard */; };
+		107794A31D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 107794A21D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoTests.m */; };
+		107794AE1D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 107794AD1D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1077949F1D4DAFC00041B2EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1077947D1D4DAFC00041B2EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 107794841D4DAFC00041B2EE;
+			remoteInfo = BEFoldMenuViewControllerDemo;
+		};
+		107794AA1D4DAFC00041B2EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1077947D1D4DAFC00041B2EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 107794841D4DAFC00041B2EE;
+			remoteInfo = BEFoldMenuViewControllerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		107794851D4DAFC00041B2EE /* BEFoldMenuViewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BEFoldMenuViewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		107794891D4DAFC00041B2EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1077948B1D4DAFC00041B2EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1077948C1D4DAFC00041B2EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1077948E1D4DAFC00041B2EE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1077948F1D4DAFC00041B2EE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		107794921D4DAFC00041B2EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		107794941D4DAFC00041B2EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		107794971D4DAFC00041B2EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		107794991D4DAFC00041B2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1077949E1D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BEFoldMenuViewControllerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		107794A21D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BEFoldMenuViewControllerDemoTests.m; sourceTree = "<group>"; };
+		107794A41D4DAFC00041B2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		107794A91D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BEFoldMenuViewControllerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		107794AD1D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BEFoldMenuViewControllerDemoUITests.m; sourceTree = "<group>"; };
+		107794AF1D4DAFC00041B2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		107794821D4DAFC00041B2EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1077949B1D4DAFC00041B2EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107794A61D4DAFC00041B2EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1077947C1D4DAFC00041B2EE = {
+			isa = PBXGroup;
+			children = (
+				107794871D4DAFC00041B2EE /* BEFoldMenuViewControllerDemo */,
+				107794A11D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoTests */,
+				107794AC1D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoUITests */,
+				107794861D4DAFC00041B2EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		107794861D4DAFC00041B2EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				107794851D4DAFC00041B2EE /* BEFoldMenuViewControllerDemo.app */,
+				1077949E1D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoTests.xctest */,
+				107794A91D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		107794871D4DAFC00041B2EE /* BEFoldMenuViewControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1077948B1D4DAFC00041B2EE /* AppDelegate.h */,
+				1077948C1D4DAFC00041B2EE /* AppDelegate.m */,
+				1077948E1D4DAFC00041B2EE /* ViewController.h */,
+				1077948F1D4DAFC00041B2EE /* ViewController.m */,
+				107794911D4DAFC00041B2EE /* Main.storyboard */,
+				107794941D4DAFC00041B2EE /* Assets.xcassets */,
+				107794961D4DAFC00041B2EE /* LaunchScreen.storyboard */,
+				107794991D4DAFC00041B2EE /* Info.plist */,
+				107794881D4DAFC00041B2EE /* Supporting Files */,
+			);
+			path = BEFoldMenuViewControllerDemo;
+			sourceTree = "<group>";
+		};
+		107794881D4DAFC00041B2EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				107794891D4DAFC00041B2EE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		107794A11D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				107794A21D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoTests.m */,
+				107794A41D4DAFC00041B2EE /* Info.plist */,
+			);
+			path = BEFoldMenuViewControllerDemoTests;
+			sourceTree = "<group>";
+		};
+		107794AC1D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				107794AD1D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoUITests.m */,
+				107794AF1D4DAFC00041B2EE /* Info.plist */,
+			);
+			path = BEFoldMenuViewControllerDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		107794841D4DAFC00041B2EE /* BEFoldMenuViewControllerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 107794B21D4DAFC00041B2EE /* Build configuration list for PBXNativeTarget "BEFoldMenuViewControllerDemo" */;
+			buildPhases = (
+				107794811D4DAFC00041B2EE /* Sources */,
+				107794821D4DAFC00041B2EE /* Frameworks */,
+				107794831D4DAFC00041B2EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BEFoldMenuViewControllerDemo;
+			productName = BEFoldMenuViewControllerDemo;
+			productReference = 107794851D4DAFC00041B2EE /* BEFoldMenuViewControllerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1077949D1D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 107794B51D4DAFC00041B2EE /* Build configuration list for PBXNativeTarget "BEFoldMenuViewControllerDemoTests" */;
+			buildPhases = (
+				1077949A1D4DAFC00041B2EE /* Sources */,
+				1077949B1D4DAFC00041B2EE /* Frameworks */,
+				1077949C1D4DAFC00041B2EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				107794A01D4DAFC00041B2EE /* PBXTargetDependency */,
+			);
+			name = BEFoldMenuViewControllerDemoTests;
+			productName = BEFoldMenuViewControllerDemoTests;
+			productReference = 1077949E1D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		107794A81D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 107794B81D4DAFC00041B2EE /* Build configuration list for PBXNativeTarget "BEFoldMenuViewControllerDemoUITests" */;
+			buildPhases = (
+				107794A51D4DAFC00041B2EE /* Sources */,
+				107794A61D4DAFC00041B2EE /* Frameworks */,
+				107794A71D4DAFC00041B2EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				107794AB1D4DAFC00041B2EE /* PBXTargetDependency */,
+			);
+			name = BEFoldMenuViewControllerDemoUITests;
+			productName = BEFoldMenuViewControllerDemoUITests;
+			productReference = 107794A91D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1077947D1D4DAFC00041B2EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Vũ Trường Giang";
+				TargetAttributes = {
+					107794841D4DAFC00041B2EE = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					1077949D1D4DAFC00041B2EE = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 107794841D4DAFC00041B2EE;
+					};
+					107794A81D4DAFC00041B2EE = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 107794841D4DAFC00041B2EE;
+					};
+				};
+			};
+			buildConfigurationList = 107794801D4DAFC00041B2EE /* Build configuration list for PBXProject "BEFoldMenuViewControllerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1077947C1D4DAFC00041B2EE;
+			productRefGroup = 107794861D4DAFC00041B2EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				107794841D4DAFC00041B2EE /* BEFoldMenuViewControllerDemo */,
+				1077949D1D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoTests */,
+				107794A81D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		107794831D4DAFC00041B2EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107794981D4DAFC00041B2EE /* LaunchScreen.storyboard in Resources */,
+				107794951D4DAFC00041B2EE /* Assets.xcassets in Resources */,
+				107794931D4DAFC00041B2EE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1077949C1D4DAFC00041B2EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107794A71D4DAFC00041B2EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		107794811D4DAFC00041B2EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107794901D4DAFC00041B2EE /* ViewController.m in Sources */,
+				1077948D1D4DAFC00041B2EE /* AppDelegate.m in Sources */,
+				1077948A1D4DAFC00041B2EE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1077949A1D4DAFC00041B2EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107794A31D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107794A51D4DAFC00041B2EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107794AE1D4DAFC00041B2EE /* BEFoldMenuViewControllerDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		107794A01D4DAFC00041B2EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 107794841D4DAFC00041B2EE /* BEFoldMenuViewControllerDemo */;
+			targetProxy = 1077949F1D4DAFC00041B2EE /* PBXContainerItemProxy */;
+		};
+		107794AB1D4DAFC00041B2EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 107794841D4DAFC00041B2EE /* BEFoldMenuViewControllerDemo */;
+			targetProxy = 107794AA1D4DAFC00041B2EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		107794911D4DAFC00041B2EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				107794921D4DAFC00041B2EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		107794961D4DAFC00041B2EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				107794971D4DAFC00041B2EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		107794B01D4DAFC00041B2EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		107794B11D4DAFC00041B2EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		107794B31D4DAFC00041B2EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BEFoldMenuViewControllerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beetsoft.BEFoldMenuViewControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		107794B41D4DAFC00041B2EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BEFoldMenuViewControllerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beetsoft.BEFoldMenuViewControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		107794B61D4DAFC00041B2EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BEFoldMenuViewControllerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beetsoft.BEFoldMenuViewControllerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BEFoldMenuViewControllerDemo.app/BEFoldMenuViewControllerDemo";
+			};
+			name = Debug;
+		};
+		107794B71D4DAFC00041B2EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BEFoldMenuViewControllerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beetsoft.BEFoldMenuViewControllerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BEFoldMenuViewControllerDemo.app/BEFoldMenuViewControllerDemo";
+			};
+			name = Release;
+		};
+		107794B91D4DAFC00041B2EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BEFoldMenuViewControllerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beetsoft.BEFoldMenuViewControllerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BEFoldMenuViewControllerDemo;
+			};
+			name = Debug;
+		};
+		107794BA1D4DAFC00041B2EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BEFoldMenuViewControllerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beetsoft.BEFoldMenuViewControllerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BEFoldMenuViewControllerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		107794801D4DAFC00041B2EE /* Build configuration list for PBXProject "BEFoldMenuViewControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107794B01D4DAFC00041B2EE /* Debug */,
+				107794B11D4DAFC00041B2EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		107794B21D4DAFC00041B2EE /* Build configuration list for PBXNativeTarget "BEFoldMenuViewControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107794B31D4DAFC00041B2EE /* Debug */,
+				107794B41D4DAFC00041B2EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		107794B51D4DAFC00041B2EE /* Build configuration list for PBXNativeTarget "BEFoldMenuViewControllerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107794B61D4DAFC00041B2EE /* Debug */,
+				107794B71D4DAFC00041B2EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		107794B81D4DAFC00041B2EE /* Build configuration list for PBXNativeTarget "BEFoldMenuViewControllerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107794B91D4DAFC00041B2EE /* Debug */,
+				107794BA1D4DAFC00041B2EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1077947D1D4DAFC00041B2EE /* Project object */;
+}
