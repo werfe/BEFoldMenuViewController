@@ -7,8 +7,10 @@
 //
 
 #import "MainViewController.h"
+#import "BEFoldMenuViewController.h"
 
-@interface MainViewController ()
+
+@interface MainViewController ()<BEFoldMenuDelegate>
 
 @end
 
@@ -17,6 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"Main View Controller";
+    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStylePlain target:self action:@selector(buttonMenuTapped)];
+    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"Right" style:UIBarButtonItemStylePlain target:self action:@selector(buttonRightMenuTapped)];
+    self.navigationItem.leftBarButtonItem = leftBtn;
+    self.navigationItem.rightBarButtonItem = rightBtn;
+    
+    self.foldMenuController.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +44,42 @@
 }
 */
 
+#pragma mark - Action for button
+-(void)buttonMenuTapped{
+    [self.foldMenuController leftMenuAction];
+}
+-(void)buttonRightMenuTapped{
+    [self.foldMenuController rightMenuAction];
+}
+
+#pragma mark - BEFoldMenuDelegate
+-(void)foldMenuControllerWillBeginDragging:(UIViewController*) foldMenuController{
+    NSLog(@"WillBeginDragging");
+}
+-(void)foldMenuControllerWillEndDragging:(UIViewController*) foldMenuController{
+    NSLog(@"WillEndDragging");
+}
+-(void)foldMenuControllerDidEndDragging:(UIViewController*) foldMenuController{
+    NSLog(@"DidEndDragging");
+}
+-(void)foldMenuControllerWillStartAnimation:(UIViewController*) foldMenuController duration:(CGFloat) duration{
+    NSLog(@"WillStartAnimation");
+}
+-(void)foldMenuControllerDidEndAnimation:(UIViewController*) foldMenuController{
+    NSLog(@"DidEndAnimation");
+}
+
+
+//Left
+-(void)foldMenuController:(UIViewController*) foldMenuController didShowLeftMenu:(UIViewController*) leftMenuController{
+    NSLog(@"didShowLeftMenu");
+}
+//Right
+-(void)foldMenuController:(UIViewController*) foldMenuController didShowRighMenu:(UIViewController*) leftMenuController{
+    NSLog(@"didShowRighMenu");
+}
+//Hide
+-(void)foldMenuControllerDidHideMenu:(UIViewController*) foldMenuController{
+    NSLog(@"DidHideMenu");
+}
 @end

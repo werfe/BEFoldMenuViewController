@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomSegue : UIStoryboardSegue
+@interface BECustomSegue : UIStoryboardSegue
 
 
 

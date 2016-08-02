@@ -7,6 +7,7 @@
 //
 
 #import "BEFoldMenuViewController.h"
+#import "UIView+Frame.h"
 
 #define FOLD_OPACITY_MAXIMUM 0.3f
 
@@ -34,10 +35,13 @@
 @property (nonatomic, strong) CALayer *topSleeve;
 @property (nonatomic, strong) CALayer *middleSleeve;
 @property (nonatomic, strong) CALayer *middleShadow;
-@property (nonatomic, strong) UIView *overlayPerspectiveView;
 @property (nonatomic, strong) CALayer *firstJointLayer;
 @property (nonatomic, strong) CALayer *secondJointLayer;
 @property (nonatomic, strong) CALayer *perspectiveLayer;
+
+@property (nonatomic, strong) UIView *overlayPerspectiveView;
+
+@property (nonatomic, strong) UIView *overlayMainView;
 
 @end
 
@@ -49,7 +53,11 @@
     // Do any additional setup after loading the view.
     
     [self initializeData];
-    
+    if (self.storyboard) {
+        [self performSegueWithIdentifier:@"mainSegue" sender:nil];
+        [self performSegueWithIdentifier:@"leftSegue" sender:nil];
+        [self performSegueWithIdentifier:@"rightSegue" sender:nil];
+    }
 }
 -(void)viewDidAppear:(BOOL)animated{
     [self initCaptureLayer];
@@ -64,8 +72,7 @@
 }
 #pragma mark -  Data preparing method
 -(void)initializeData{
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-    [self.view addGestureRecognizer:panGesture];
+    
     _menuState = BSMenuStateCenterOpen;
     
     _topShadowColor = DEFAULT_TOP_SHADOW_COLOR;
@@ -76,6 +83,9 @@
     
     _leftMenuWidth = DEFAULT_LEFT_MENU_WIDTH;
     _rightMenuWidth = DEFAULT_RIGHT_MENU_WIDTH;
+    
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    [self.view addGestureRecognizer:panGesture];
     
 }
 
@@ -164,7 +174,7 @@
         _perspectiveLayer.sublayerTransform = _transform3DEffect;
         
         [_leftViewController.view addSubview:_overlayPerspectiveView];
-        
+
     }else{
         [CATransaction begin];
         [CATransaction setDisableActions:YES];
@@ -175,36 +185,50 @@
         [_leftViewController.view addSubview:_overlayPerspectiveView];
         [CATransaction commit];
     }
+    
     [_leftViewController.view bringSubviewToFront:_overlayPerspectiveView];
 
 }
 
 #pragma mark - Public Method
--(void)setTopViewController:(UIViewController *)topViewController{
-    if (!topViewController) {
+-(void)setMainViewController:(UIViewController *)mainViewController{
+    if (!mainViewController) {
         return;
     }
-    if (_topViewController) {
-        [_topViewController.view removeFromSuperview];
-        [_topViewController willMoveToParentViewController:nil];
-        [_topViewController beginAppearanceTransition:NO animated:NO];
-        [_topViewController removeFromParentViewController];
-        [_topViewController endAppearanceTransition];
+    if (_mainViewController) {
+        [_mainViewController.view removeFromSuperview];
+        [_mainViewController willMoveToParentViewController:nil];
+        [_mainViewController beginAppearanceTransition:NO animated:NO];
+        [_mainViewController removeFromParentViewController];
+        [_mainViewController endAppearanceTransition];
+        [_overlayMainView removeFromSuperview];
     }
     
-    _topViewController = topViewController;
-    [self addChildViewController:_topViewController];
+    _mainViewController = mainViewController;
+    [self addChildViewController:_mainViewController];
     [self didMoveToParentViewController:self];
     
     if ([self isViewLoaded]) {
-        [_topViewController.view setFrame:[UIScreen mainScreen].bounds];
-        [_topViewController beginAppearanceTransition:YES animated:NO];
-        [self.view addSubview:_topViewController.view];
-        _topViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+        [_mainViewController.view setFrame:[UIScreen mainScreen].bounds];
+        if (!_overlayMainView) {
+            _overlayMainView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+            [_overlayMainView setBackgroundColor:[UIColor clearColor]];
+            UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+            [_overlayMainView addGestureRecognizer:tapGesture];
+            [_overlayMainView setHidden:YES];
+        }else{
+            [_overlayMainView removeFromSuperview];
+            [_overlayMainView setHidden:YES];
+        }
+        [_mainViewController beginAppearanceTransition:YES animated:NO];
+        [self.view addSubview:_mainViewController.view];
+        [_mainViewController.view addSubview:_overlayMainView];
+        _overlayMainView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+        _mainViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 
         [self setupTopViewShadow];
         
-        [_topViewController endAppearanceTransition];
+        [_mainViewController endAppearanceTransition];
     }
 }
 
@@ -229,7 +253,7 @@
     CGRect leftViewFrame = [UIScreen mainScreen].bounds;
     leftViewFrame.size.width = _leftMenuWidth;
     [_leftViewController.view setFrame:leftViewFrame];
-    [self.view insertSubview:_leftViewController.view belowSubview:_topViewController.view];
+    [self.view insertSubview:_leftViewController.view belowSubview:_mainViewController.view];
     _leftViewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleRightMargin;
     _leftMenuEnabled = YES;
     _foldEffeectEnabled = YES;
@@ -254,7 +278,7 @@
     
     CGRect rightViewFrame = CGRectMake(SCREEN_WIDTH-_rightMenuWidth, 0, _rightMenuWidth, SCREEN_HEIGHT);
     [_rightViewController.view setFrame:rightViewFrame];
-    [self.view insertSubview:_rightViewController.view belowSubview:_topViewController.view];
+    [self.view insertSubview:_rightViewController.view belowSubview:_mainViewController.view];
     _rightViewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin;
     _rightMenuEnabled = YES;
 }
@@ -311,6 +335,7 @@
         return;
     }
     [self initCaptureLayer];
+    [self.view sendSubviewToBack:_rightViewController.view];
     if (_menuState == BSMenuStateCenterOpen) {
         [self animateWithState:BSMenuStateLeftOpen duration:_animationDuration];
     }
@@ -319,7 +344,24 @@
     }
 }
 
-#pragma mark - UIPanGestureRecognizer method
+-(void)rightMenuAction{
+    if (_menuState == BSMenuStateLeftOpen) {
+        return;
+    }
+    [self initCaptureLayer];
+    [self.view sendSubviewToBack:_leftViewController.view];
+    if (_menuState == BSMenuStateCenterOpen) {
+        [self animateWithState:BSMenuStateRightOpen duration:_animationDuration];
+    }
+    else{
+        [self animateWithState:BSMenuStateCenterOpen duration:_animationDuration];
+    }
+}
+
+#pragma mark - UIGestureRecognizer method
+-(IBAction)tap:(UIPanGestureRecognizer *)recognizer{
+    [self animateWithState:BSMenuStateCenterOpen duration:0.15f];
+}
 - (IBAction)pan:(UIPanGestureRecognizer *)recognizer {
     CGPoint translation = [recognizer translationInView:self.view];
     static CGFloat distance = 0.0f;
@@ -337,7 +379,7 @@
             }
             _isDragging = YES;
             
-            tx = _topViewController.view.transform.tx;
+            tx = _mainViewController.view.transform.tx;
             
             break;
         case UIGestureRecognizerStateChanged:{
@@ -432,7 +474,7 @@
             }
             _isDragging = NO;
             CGFloat velocity = [recognizer velocityInView:self.view].x;
-            CGFloat tx = _topViewController.view.transform.tx;
+            CGFloat tx = _mainViewController.view.transform.tx;
             
             if (tx > 0) {
                 //If swipe for showing left menu
@@ -531,7 +573,7 @@
         _middleShadow.opacity = 0.3*(1-ratio);
     }
     
-    _topViewController.view.transform = CGAffineTransformMakeTranslation(theSpace, 0);
+    _mainViewController.view.transform = CGAffineTransformMakeTranslation(theSpace, 0);
     [CATransaction commit];
     
 }
@@ -542,6 +584,8 @@
 }
 -(void)animateWithState:(BSMenuState)menuState duration:(NSTimeInterval) duration
 {
+    __weak BEFoldMenuViewController *weakSelf = self;
+    
     __block CGFloat foldAngle = 0.0f;
     __block CGFloat foldOpacity = 0.0f;
     __block CGFloat translationX = 0.0f;
@@ -585,8 +629,12 @@
     }
     
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    if (_delegate && [_delegate respondsToSelector:@selector(foldMenuControllerWillStartAnimation:duration:)]) {
+        [_delegate foldMenuControllerWillStartAnimation:weakSelf duration:duration];
+    }else{
+        NSLog(@"%s Delegate not response to selector",__PRETTY_FUNCTION__);
+    }
     [CATransaction begin];
-    
     CABasicAnimation*  animation = nil;
     
     if (_foldEffeectEnabled == YES) {
@@ -631,11 +679,11 @@
     animation.fillMode = kCAFillModeForwards;
     animation.removedOnCompletion = NO;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-    [animation setFromValue:[NSValue valueWithCATransform3D:_topViewController.view.layer.transform]];
+    [animation setFromValue:[NSValue valueWithCATransform3D:_mainViewController.view.layer.transform]];
     [animation setToValue:[NSValue valueWithCATransform3D:CATransform3DMakeTranslation(translationX, 0, 0)]];
     
     
-    __weak BEFoldMenuViewController *weakSelf = self;
+    
     [CATransaction setCompletionBlock:^{
         weakSelf.menuState = _theMenuState;
         if (weakSelf.foldEffeectEnabled == YES) {
@@ -643,7 +691,7 @@
             [weakSelf.secondJointLayer removeAnimationForKey:@"secondJointLayer.transform"];
             [weakSelf.middleShadow removeAnimationForKey:@"middleShadow.opacity"];
         }
-        [weakSelf.topViewController.view.layer removeAnimationForKey:@"topViewController.transform"];
+        [weakSelf.mainViewController.view.layer removeAnimationForKey:@"mainViewController.transform"];
         [weakSelf foldViewWithSpace:translationX];
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -659,6 +707,8 @@
                 
                 switch (_theMenuState) {
                     case BSMenuStateLeftOpen:{
+                        [weakSelf.overlayMainView setHidden:NO];
+//                        [weakSelf.mainViewController.view bringSubviewToFront:weakSelf.overlayMainView];
                         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(foldMenuController:didShowLeftMenu:)]) {
                             __weak id weakLeft = weakSelf.leftViewController;
                             [weakSelf.delegate foldMenuController:weakSelf didShowLeftMenu:weakLeft];
@@ -668,6 +718,8 @@
                         break;
                     }
                     case BSMenuStateRightOpen:{
+                        [weakSelf.overlayMainView setHidden:NO];
+//                        [weakSelf.mainViewController.view bringSubviewToFront:weakSelf.overlayMainView];
                         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(foldMenuController:didShowRighMenu:)]) {
                             __weak id weakRight = weakSelf.rightViewController;
                             [weakSelf.delegate foldMenuController:weakSelf didShowRighMenu:weakRight];
@@ -677,6 +729,7 @@
                         break;
                     }
                     case BSMenuStateCenterOpen:{
+                        [weakSelf.overlayMainView setHidden:YES];
                         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(foldMenuControllerDidHideMenu:)]) {
                             [weakSelf.delegate foldMenuControllerDidHideMenu:weakSelf];
                         }else{
@@ -692,18 +745,18 @@
         
         
     }];
-    [_topViewController.view.layer addAnimation:animation forKey:@"topViewController.transform"];
+    [_mainViewController.view.layer addAnimation:animation forKey:@"mainViewController.transform"];
     [CATransaction commit];
 }
 
 -(void)setupTopViewShadow{
-    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:CGRectMake(-_topShadowWidth, -_topShadowWidth, _topViewController.view.width+2*_topShadowWidth, _topViewController.view.height+2*_topShadowWidth)];
+    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:CGRectMake(-_topShadowWidth, -_topShadowWidth, _mainViewController.view.width+2*_topShadowWidth, _mainViewController.view.height+2*_topShadowWidth)];
     
-    _topViewController.view.layer.masksToBounds = NO;
-    _topViewController.view.layer.shadowColor = _topShadowColor.CGColor;
-    _topViewController.view.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
-    _topViewController.view.layer.shadowOpacity = _topShadowOpacity;
-    _topViewController.view.layer.shadowPath = shadowPath.CGPath;
+    _mainViewController.view.layer.masksToBounds = NO;
+    _mainViewController.view.layer.shadowColor = _topShadowColor.CGColor;
+    _mainViewController.view.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
+    _mainViewController.view.layer.shadowOpacity = _topShadowOpacity;
+    _mainViewController.view.layer.shadowPath = shadowPath.CGPath;
 }
 -(void)setupFoldLayout{
     CGFloat currentDeviceWidth = CGRectGetWidth([UIScreen mainScreen].bounds);

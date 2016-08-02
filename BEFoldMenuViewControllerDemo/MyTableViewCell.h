@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MyTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

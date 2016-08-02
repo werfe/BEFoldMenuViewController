@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, BSMenuState) {
 
 @interface BEFoldMenuViewController : UIViewController<UIScrollViewDelegate>
 
-@property (nonatomic, strong) UIViewController *topViewController;
+@property (nonatomic, strong) UIViewController *mainViewController;
 
 @property (nonatomic, strong) UIViewController *leftViewController;
 @property (nonatomic, assign) BOOL leftMenuEnabled;
@@ -42,6 +42,7 @@ typedef NS_ENUM(NSUInteger, BSMenuState) {
 
 
 -(void)leftMenuAction;
+-(void)rightMenuAction;
 
 @end
 
@@ -51,6 +52,7 @@ typedef NS_ENUM(NSUInteger, BSMenuState) {
 -(void)foldMenuControllerWillBeginDragging:(UIViewController*) foldMenuController;
 -(void)foldMenuControllerWillEndDragging:(UIViewController*) foldMenuController;
 -(void)foldMenuControllerDidEndDragging:(UIViewController*) foldMenuController;
+-(void)foldMenuControllerWillStartAnimation:(UIViewController*) foldMenuController duration:(CGFloat) duration;
 -(void)foldMenuControllerDidEndAnimation:(UIViewController*) foldMenuController;
 
 
