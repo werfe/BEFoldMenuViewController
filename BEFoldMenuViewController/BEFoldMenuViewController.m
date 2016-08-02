@@ -412,6 +412,7 @@
 
 #pragma mark - UIGestureRecognizer method
 -(IBAction)tap:(UIPanGestureRecognizer *)recognizer{
+    [self initCaptureLayer];
     [self animateWithState:BSMenuStateCenterOpen duration:0.15f];
 }
 - (IBAction)pan:(UIPanGestureRecognizer *)recognizer {

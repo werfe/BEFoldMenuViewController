@@ -25,6 +25,7 @@
 		1077952C1D503BC30041B2EE /* right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 107795291D503BC30041B2EE /* right.jpg */; };
 		1077952F1D503C1F0041B2EE /* BECustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077952E1D503C1F0041B2EE /* BECustomSegue.m */; };
 		107795331D5051890041B2EE /* captureAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 107795321D5051890041B2EE /* captureAnimation.gif */; };
+		107795351D50A41F0041B2EE /* segueSetup.png in Resources */ = {isa = PBXBuildFile; fileRef = 107795341D50A41F0041B2EE /* segueSetup.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		1077952D1D503C1F0041B2EE /* BECustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BECustomSegue.h; sourceTree = "<group>"; };
 		1077952E1D503C1F0041B2EE /* BECustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BECustomSegue.m; sourceTree = "<group>"; };
 		107795321D5051890041B2EE /* captureAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = captureAnimation.gif; sourceTree = "<group>"; };
+		107795341D50A41F0041B2EE /* segueSetup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segueSetup.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,10 +179,10 @@
 			children = (
 				1077952D1D503C1F0041B2EE /* BECustomSegue.h */,
 				1077952E1D503C1F0041B2EE /* BECustomSegue.m */,
-				107794E21D4DB1510041B2EE /* BEFoldMenuViewController.h */,
-				107794E31D4DB1510041B2EE /* BEFoldMenuViewController.m */,
 				107794E51D4DB16E0041B2EE /* UIView+Frame.h */,
 				107794E61D4DB16E0041B2EE /* UIView+Frame.m */,
+				107794E21D4DB1510041B2EE /* BEFoldMenuViewController.h */,
+				107794E31D4DB1510041B2EE /* BEFoldMenuViewController.m */,
 			);
 			path = BEFoldMenuViewController;
 			sourceTree = "<group>";
@@ -192,6 +194,7 @@
 				107795281D503BC30041B2EE /* main.png */,
 				107795291D503BC30041B2EE /* right.jpg */,
 				107795321D5051890041B2EE /* captureAnimation.gif */,
+				107795341D50A41F0041B2EE /* segueSetup.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			files = (
 				1077951F1D4F99720041B2EE /* MyTableViewCell.xib in Resources */,
 				1077952C1D503BC30041B2EE /* right.jpg in Resources */,
+				107795351D50A41F0041B2EE /* segueSetup.png in Resources */,
 				1077952A1D503BC30041B2EE /* left.png in Resources */,
 				107794981D4DAFC00041B2EE /* LaunchScreen.storyboard in Resources */,
 				107795331D5051890041B2EE /* captureAnimation.gif in Resources */,
