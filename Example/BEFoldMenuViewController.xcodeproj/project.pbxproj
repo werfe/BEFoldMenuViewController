@@ -8,13 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		0CD57D630028A620526AD346 /* Pods_BEFoldMenuViewController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A53530820CC0F90C5FF05D9 /* Pods_BEFoldMenuViewController_Example.framework */; };
+		0F33B65D1DC1F1EF0013F5FA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F33B6571DC1F1EF0013F5FA /* MainViewController.m */; };
+		0F33B65E1DC1F1EF0013F5FA /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F33B6591DC1F1EF0013F5FA /* LeftViewController.m */; };
+		0F33B65F1DC1F1EF0013F5FA /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F33B65B1DC1F1EF0013F5FA /* MyTableViewCell.m */; };
+		0F33B6601DC1F1EF0013F5FA /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F33B65C1DC1F1EF0013F5FA /* MyTableViewCell.xib */; };
+		0F33B6621DC1F4D80013F5FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F33B6611DC1F4D80013F5FA /* LaunchScreen.storyboard */; };
+		0F33B6691DC1F5D20013F5FA /* captureAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0F33B6641DC1F5D20013F5FA /* captureAnimation.gif */; };
+		0F33B66A1DC1F5D20013F5FA /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F33B6651DC1F5D20013F5FA /* left.png */; };
+		0F33B66B1DC1F5D20013F5FA /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F33B6661DC1F5D20013F5FA /* main.png */; };
+		0F33B66C1DC1F5D20013F5FA /* right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F33B6671DC1F5D20013F5FA /* right.jpg */; };
+		0F33B66D1DC1F5D20013F5FA /* segueSetup.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F33B6681DC1F5D20013F5FA /* segueSetup.png */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* BEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* BEAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* BEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* BEViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -37,6 +46,19 @@
 
 /* Begin PBXFileReference section */
 		0383EBE243695459D947598D /* Pods_BEFoldMenuViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEFoldMenuViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F33B6561DC1F1EF0013F5FA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		0F33B6571DC1F1EF0013F5FA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		0F33B6581DC1F1EF0013F5FA /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		0F33B6591DC1F1EF0013F5FA /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		0F33B65A1DC1F1EF0013F5FA /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		0F33B65B1DC1F1EF0013F5FA /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		0F33B65C1DC1F1EF0013F5FA /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		0F33B6611DC1F4D80013F5FA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F33B6641DC1F5D20013F5FA /* captureAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = captureAnimation.gif; sourceTree = "<group>"; };
+		0F33B6651DC1F5D20013F5FA /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		0F33B6661DC1F5D20013F5FA /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
+		0F33B6671DC1F5D20013F5FA /* right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = right.jpg; sourceTree = "<group>"; };
+		0F33B6681DC1F5D20013F5FA /* segueSetup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segueSetup.png; sourceTree = "<group>"; };
 		1D5EB796A33A96C296414535 /* Pods-BEFoldMenuViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEFoldMenuViewController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BEFoldMenuViewController_Tests/Pods-BEFoldMenuViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4A53530820CC0F90C5FF05D9 /* Pods_BEFoldMenuViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEFoldMenuViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* BEFoldMenuViewController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BEFoldMenuViewController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,8 +71,6 @@
 		6003F59B195388D20070C39A /* BEFoldMenuViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BEFoldMenuViewController-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* BEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BEAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* BEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BEAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* BEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BEViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* BEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BEViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* BEFoldMenuViewController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BEFoldMenuViewController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -93,6 +113,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F33B6631DC1F5D20013F5FA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0F33B6641DC1F5D20013F5FA /* captureAnimation.gif */,
+				0F33B6651DC1F5D20013F5FA /* left.png */,
+				0F33B6661DC1F5D20013F5FA /* main.png */,
+				0F33B6671DC1F5D20013F5FA /* right.jpg */,
+				0F33B6681DC1F5D20013F5FA /* segueSetup.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -130,11 +162,18 @@
 		6003F593195388D20070C39A /* Example for BEFoldMenuViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0F33B6631DC1F5D20013F5FA /* images */,
 				6003F59C195388D20070C39A /* BEAppDelegate.h */,
 				6003F59D195388D20070C39A /* BEAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* BEViewController.h */,
-				6003F5A6195388D20070C39A /* BEViewController.m */,
+				0F33B6611DC1F4D80013F5FA /* LaunchScreen.storyboard */,
+				0F33B6561DC1F1EF0013F5FA /* MainViewController.h */,
+				0F33B6571DC1F1EF0013F5FA /* MainViewController.m */,
+				0F33B6581DC1F1EF0013F5FA /* LeftViewController.h */,
+				0F33B6591DC1F1EF0013F5FA /* LeftViewController.m */,
+				0F33B65A1DC1F1EF0013F5FA /* MyTableViewCell.h */,
+				0F33B65B1DC1F1EF0013F5FA /* MyTableViewCell.m */,
+				0F33B65C1DC1F1EF0013F5FA /* MyTableViewCell.xib */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -276,8 +315,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F33B66B1DC1F5D20013F5FA /* main.png in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				0F33B6601DC1F1EF0013F5FA /* MyTableViewCell.xib in Resources */,
+				0F33B66C1DC1F5D20013F5FA /* right.jpg in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				0F33B6621DC1F4D80013F5FA /* LaunchScreen.storyboard in Resources */,
+				0F33B6691DC1F5D20013F5FA /* captureAnimation.gif in Resources */,
+				0F33B66D1DC1F5D20013F5FA /* segueSetup.png in Resources */,
+				0F33B66A1DC1F5D20013F5FA /* left.png in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,8 +437,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* BEAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* BEViewController.m in Sources */,
+				0F33B65E1DC1F1EF0013F5FA /* LeftViewController.m in Sources */,
+				0F33B65F1DC1F1EF0013F5FA /* MyTableViewCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				0F33B65D1DC1F1EF0013F5FA /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,10 +560,10 @@
 			baseConfigurationReference = F8257BF33CCC97853D1F36A8 /* Pods-BEFoldMenuViewController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BEFoldMenuViewController/BEFoldMenuViewController-Prefix.pch";
 				INFOPLIST_FILE = "BEFoldMenuViewController/BEFoldMenuViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,10 +576,10 @@
 			baseConfigurationReference = 895BAFAE5191E8B65D0BDADC /* Pods-BEFoldMenuViewController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BEFoldMenuViewController/BEFoldMenuViewController-Prefix.pch";
 				INFOPLIST_FILE = "BEFoldMenuViewController/BEFoldMenuViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

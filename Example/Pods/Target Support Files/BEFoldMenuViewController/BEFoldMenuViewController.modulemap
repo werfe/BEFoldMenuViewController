@@ -1,0 +1,6 @@
+framework module BEFoldMenuViewController {
+  umbrella header "BEFoldMenuViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - BEFoldMenuViewController (0.1.0)
+
+DEPENDENCIES:
+  - BEFoldMenuViewController (from `../`)
+
+EXTERNAL SOURCES:
+  BEFoldMenuViewController:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BEFoldMenuViewController: e943a8fda78b5e7c87b0fe2bfd277dd80637a9b5
+
+PODFILE CHECKSUM: e2eceb48ccb3c8624d4aa21a2b585ea5558e71ca
+
+COCOAPODS: 1.0.1
