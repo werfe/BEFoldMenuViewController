@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BEFoldMenuViewController_Example' do
+  pod 'BEFoldMenuViewController', :path => '../'
+
+  target 'BEFoldMenuViewController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
