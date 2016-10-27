@@ -31,7 +31,6 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		BC3A54AB2E2FCD7F9A19FAC0 /* Pods_BEFoldMenuViewController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0383EBE243695459D947598D /* Pods_BEFoldMenuViewController_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +58,6 @@
 		0F33B6661DC1F5D20013F5FA /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		0F33B6671DC1F5D20013F5FA /* right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = right.jpg; sourceTree = "<group>"; };
 		0F33B6681DC1F5D20013F5FA /* segueSetup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segueSetup.png; sourceTree = "<group>"; };
-		1D5EB796A33A96C296414535 /* Pods-BEFoldMenuViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEFoldMenuViewController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BEFoldMenuViewController_Tests/Pods-BEFoldMenuViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4A53530820CC0F90C5FF05D9 /* Pods_BEFoldMenuViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEFoldMenuViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* BEFoldMenuViewController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BEFoldMenuViewController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,7 +81,6 @@
 		895BAFAE5191E8B65D0BDADC /* Pods-BEFoldMenuViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEFoldMenuViewController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BEFoldMenuViewController_Example/Pods-BEFoldMenuViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8E2C42C4EA5BA7DB6A485DB5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B198851B6CEFC648E932E40C /* BEFoldMenuViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BEFoldMenuViewController.podspec; path = ../BEFoldMenuViewController.podspec; sourceTree = "<group>"; };
-		CCA2C5A07D6306B45C81C379 /* Pods-BEFoldMenuViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEFoldMenuViewController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BEFoldMenuViewController_Tests/Pods-BEFoldMenuViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F8257BF33CCC97853D1F36A8 /* Pods-BEFoldMenuViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEFoldMenuViewController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BEFoldMenuViewController_Example/Pods-BEFoldMenuViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +103,6 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				BC3A54AB2E2FCD7F9A19FAC0 /* Pods_BEFoldMenuViewController_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,8 +222,6 @@
 			children = (
 				F8257BF33CCC97853D1F36A8 /* Pods-BEFoldMenuViewController_Example.debug.xcconfig */,
 				895BAFAE5191E8B65D0BDADC /* Pods-BEFoldMenuViewController_Example.release.xcconfig */,
-				CCA2C5A07D6306B45C81C379 /* Pods-BEFoldMenuViewController_Tests.debug.xcconfig */,
-				1D5EB796A33A96C296414535 /* Pods-BEFoldMenuViewController_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -589,7 +583,6 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCA2C5A07D6306B45C81C379 /* Pods-BEFoldMenuViewController_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -613,7 +606,6 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D5EB796A33A96C296414535 /* Pods-BEFoldMenuViewController_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
