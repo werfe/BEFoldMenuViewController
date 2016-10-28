@@ -25,11 +25,6 @@ Description
 - [x] Automatic orientation change adjustments.
 - [x] Storyboard and xib support.
 
-
-## Example
-
-
-
 ## Installation
 * via CocoaPods
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -149,10 +144,6 @@ BEFoldMenuViewController support two method for show/hide left or right menu wit
 -(void)rightMenuAction;
 ```
 --------------
-
-## Author
-
-GiangVT, giangvt@beetsoft.com.vn
 
 ##<a name="contact"> Contact </a>
 --------------
