@@ -2,15 +2,15 @@ PODS:
   - BEFoldMenuViewController (0.1.0)
 
 DEPENDENCIES:
-  - BEFoldMenuViewController (from `/Users/bs1/Documents/XcodeWorkspace/Pod/BEFoldMenuViewController`)
+  - BEFoldMenuViewController (from `../`)
 
 EXTERNAL SOURCES:
   BEFoldMenuViewController:
-    :path: /Users/bs1/Documents/XcodeWorkspace/Pod/BEFoldMenuViewController
+    :path: ../
 
 SPEC CHECKSUMS:
   BEFoldMenuViewController: e943a8fda78b5e7c87b0fe2bfd277dd80637a9b5
 
-PODFILE CHECKSUM: 648a43eb88a8c8de53f7fafb2fa2526b80b645ec
+PODFILE CHECKSUM: 22ff3864a4505c5f925d7f775aba1ed94c814e97
 
 COCOAPODS: 1.0.1
